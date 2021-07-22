@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+.container {
+    height: 350px;
+    width: 30%;
+    display: inline-flex;
+    border: 1px solid gray;
+}
