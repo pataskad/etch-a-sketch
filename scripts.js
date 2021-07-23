@@ -4,10 +4,16 @@
 const container = document.querySelector('.container');
 
 // create node div elements before named function to/and hold in memory? 
-const divs = document.createElement('div');
-divs.style.border = '2px solid gray'; // may need to change to transparent later
-divs.style.height = '32px';
-divs.style.width = '32px';
+// const divs = document.createElement('div');
 
-container.appendChild(divs);
+// container.appendChild(divs);
 
+let squares = 144;
+
+
+for (let i = 0; i < squares; i++) {
+    const divs = document.createElement('div');
+    divs.className = 'js-div';
+
+    container.appendChild(divs);
+}
