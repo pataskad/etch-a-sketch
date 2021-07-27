@@ -3,14 +3,15 @@
 
 const container = document.querySelector('.container');
 
-let squares = 144;
-
 // core program to create divs within container
-for (let i = 0; i < squares; i++) {
-    const divs = document.createElement('div');
-    divs.className = 'js-div';
-    container.appendChild(divs);
-    divs.addEventListener('mouseover', colorChange); // add event listener to every created div
+
+for(let x = 0; x < 16; x++) {
+    for(let y = 0; y < 16; y++) {
+        const divs = document.createElement('div');
+        divs.className = 'js-div';
+        container.appendChild(divs);
+        divs.addEventListener('mouseover', colorChange);
+    }
 }
 
 function colorChange(e) {
