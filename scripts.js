@@ -4,9 +4,12 @@
 const container = document.querySelector('.container');
 const resetBtn = document.querySelector('#grid-reset');
 
+let xSquares = 16; // will prompt user for squares, limit to 100
+let ySquares = 16;
+
 // core program to create divs within container, 16x16 grid
-for(let x = 0; x < 16; x++) {
-    for(let y = 0; y < 16; y++) {
+for(let x = 0; x < xSquares; x++) {
+    for(let y = 0; y < ySquares; y++) {
         const divs = document.createElement('div');
         divs.className = 'js-div';
         container.appendChild(divs);
