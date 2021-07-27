@@ -2,16 +2,18 @@ body {
     text-align: center;
 }
 .container {
-    height: fit-content;
     margin-inline: auto;
-    margin-top: 50px;
+    margin-top: 25px;
     width: 30%;
-    border: 1px solid gray;
 }
 .js-div {
-    border: 1px solid gray;
+    border: 0.25px solid rgba(192, 189, 189, 0.397);
     height: 32px;
     width: 32px;
     vertical-align: bottom;
     display: inline-block;
+}
+#grid-reset {
+    margin-top: 50px;
+    text-align: left;
 }
