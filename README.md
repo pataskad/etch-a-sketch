@@ -7,3 +7,10 @@ This project is apart of 'The Odin Project' curriculum and its purpose is to dem
 * HTML5
 * Javascript
 * CSS3
+
+# Tools #
+
+* VSCode
+* GitHub
+* Git
+* Google-Fu and Technical Documentation

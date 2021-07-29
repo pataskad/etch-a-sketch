@@ -2,19 +2,23 @@ body {
     text-align: center;
     background-color: azure;
 }
+h1 {
+    margin: 50px 0px 0px 0px;
+}
 .container {
     margin-inline: auto;
-    margin-top: 25px;
-    width: 30%;
+    margin-top: 30px;
+    width: 550px;
+    height: 550px;
+    display: grid;
+    border: 10px solid green;
+    box-shadow: 5px lawngreen;
 }
 .js-div {
     border: 0.25px solid rgba(192, 189, 189, 0.397);
-    height: 32px;
-    width: 32px;
-    vertical-align: bottom;
-    display: inline-block;
+    display: inline-grid;
 }
 #grid-reset {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: left;
 }

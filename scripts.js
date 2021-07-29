@@ -1,19 +1,24 @@
 'use strict';
 
-
 const container = document.querySelector('.container');
 const resetBtn = document.querySelector('#grid-reset');
 
-let xSquares = 16; // will prompt user for squares, limit to 100
-let ySquares = 16;
+let squareSideCount = 16; // limit squares to 100
+let divs = [];
 
+createDivGrid(squareSideCount);
 // core program to create divs within container, 16x16 grid
-for(let x = 0; x < xSquares; x++) {
-    for(let y = 0; y < ySquares; y++) {
-        const divs = document.createElement('div');
-        divs.className = 'js-div';
-        container.appendChild(divs);
-        divs.addEventListener('mouseover', colorChange);
+function createDivGrid(squareSideCount) {
+    container.style.gridTemplateColumns = (`repeat(${squareSideCount}, 1fr`);
+    container.style.gridTemplateRows = (`repeat(${squareSideCount}, 1fr`);
+    let cellCount = squareSideCount * squareSideCount;
+
+    for (let y = 0; y < cellCount; y++) {
+        divs[y] = document.createElement('div');
+        divs[y].classList.add('js-div');
+        //divs[y].className = 'js-div-regular';
+        divs[y].addEventListener('mouseover', colorChange);
+        container.appendChild(divs[y]);
     }
 }
 
@@ -31,6 +36,11 @@ function resetBackground() {
         item.style.backgroundColor = '';
     }
 }
+function setSquares() {
+    //squareSideCount = prompt("Choose the amount of squares per side");
+}
 
-resetBtn.addEventListener('click', resetBackground);
-
+resetBtn.addEventListener('click', () => {
+    resetBackground();
+    setSquares();
+});
