@@ -1,8 +1,10 @@
 body {
     text-align: center;
-    background-color: azure;
+    background-color: rgba(0, 122, 192, 0.274);
 }
 h1 {
+    color: dodgerblue;
+    font-size: 50px;
     margin: 50px 0px 0px 0px;
 }
 .container {
@@ -11,14 +13,24 @@ h1 {
     width: 550px;
     height: 550px;
     display: grid;
-    border: 10px solid green;
-    box-shadow: 5px lawngreen;
+    border: 20px solid dodgerblue;
+    border-radius: 25px;
 }
 .js-div {
+    background: rgb(253, 240, 240);
     border: 0.25px solid rgba(192, 189, 189, 0.397);
     display: inline-grid;
 }
 #grid-reset {
     margin-top: 30px;
     text-align: left;
+    background-color: snow;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-color: red;
+}
+#grid-reset:hover {
+    color: red;
+    background-color: rgba(0, 122, 192, 0.274);
 }

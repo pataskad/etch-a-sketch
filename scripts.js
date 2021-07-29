@@ -3,7 +3,7 @@
 const container = document.querySelector('.container');
 const resetBtn = document.querySelector('#grid-reset');
 
-let squareSideCount = 16; // limit squares to 100
+let squareSideCount = 32; // limit squares to 100
 let divs = [];
 
 createDivGrid(squareSideCount);
