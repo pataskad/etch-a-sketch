@@ -7,6 +7,17 @@ h1 {
     font-size: 50px;
     margin: 50px 0px 0px 0px;
 }
+footer > h2 {
+    color: dodgerblue;
+    margin-top: 40px;
+}
+footer > h2 > a {
+    color: indianred;
+    text-decoration: none;
+}
+footer > h2 > a:hover {
+    text-decoration: underline;
+}
 .container {
     margin-inline: auto;
     margin-top: 30px;
