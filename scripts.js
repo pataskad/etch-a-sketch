@@ -34,7 +34,7 @@ function resetBackground() {
 resetBtn.addEventListener('click', () => {
     resetBackground();
     modal.style.display = "block";
-    main.classList.add('blur'); // add css styling to 'fade' or blur main content when modal is active
+    main.classList.add('blur');
 });
 
 // modal content and functions
