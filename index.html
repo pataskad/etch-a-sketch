@@ -14,6 +14,16 @@
 
         <h1>Etch-A-Sketch</h1>
         <main>
+            <!--user input modal for choosing grid side squares-->
+            <div id="input-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span> <!--&times; ?-->
+                    <p>Please choose a number between 4 and 100</p>
+                    <input id="input-box" type="number">
+                    <input id="input-submit-btn" type="submit">
+                </div>
+            </div>
+
             <button id="grid-reset">Reset Grid</button>
             <!--Container is for JS DOM manipulation-->
             <div class="container"></div>

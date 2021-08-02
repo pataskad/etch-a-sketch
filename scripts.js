@@ -29,11 +29,21 @@ function resetBackground() {
         divs[j].style.backgroundColor = '';
     }
 }
-function setSquares() {
-    //squareSideCount = prompt("Choose the amount of squares per side");
-}
 
 resetBtn.addEventListener('click', () => {
     resetBackground();
-    setSquares();
+    modal.style.display = "block";
+    // add css styling to 'fade' or blur main content when modal is active
 });
+
+// modal content and functions
+let modal = document.getElementById("input-modal");
+let span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(e) {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+}
