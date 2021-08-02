@@ -2,6 +2,7 @@
 
 const container = document.querySelector('.container');
 const resetBtn = document.querySelector('#grid-reset');
+const main = document.querySelector('#main-content');
 
 let squareSideCount = 16; // limit squares to 100
 let divs = [];
@@ -33,17 +34,19 @@ function resetBackground() {
 resetBtn.addEventListener('click', () => {
     resetBackground();
     modal.style.display = "block";
-    // add css styling to 'fade' or blur main content when modal is active
+    main.classList.add('blur'); // add css styling to 'fade' or blur main content when modal is active
 });
 
 // modal content and functions
 let modal = document.getElementById("input-modal");
 let span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
+    main.classList.remove('blur');
     modal.style.display = "none";
 }
 window.onclick = function(e) {
     if (e.target == modal) {
+        main.classList.remove('blur');
         modal.style.display = "none";
     }
 }

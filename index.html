@@ -12,22 +12,24 @@
 
     <body>
 
-        <h1>Etch-A-Sketch</h1>
-        <main>
-            <!--user input modal for choosing grid side squares-->
-            <div id="input-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span> <!--&times; ?-->
-                    <p>Please choose a number between 4 and 100</p>
-                    <input id="input-box" type="number">
-                    <input id="input-submit-btn" type="submit">
-                </div>
-            </div>
 
+        <!--user input modal for choosing grid side squares-->
+        <div id="input-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span> <!--&times; ?-->
+                <p>Please choose a number between 4 and 100</p>
+                <input id="input-box" type="number" min="4" max="100" placeholder= 4>
+                <input id="input-submit-btn" type="submit" value="Confirm Number">
+            </div>
+        </div>
+
+        <main id="main-content">
+            <h1>Etch-A-Sketch</h1>
             <button id="grid-reset">Reset Grid</button>
-            <!--Container is for JS DOM manipulation-->
+            <!--Container is for JS DOM manipulation div grid-->
             <div class="container"></div>
         </main>
+
         <footer>
             <h2>Made by: <a href="https://github.com/pataskad">Dallas Pataska</a></h2>
         </footer>
