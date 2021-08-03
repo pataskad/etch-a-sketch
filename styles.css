@@ -55,7 +55,7 @@ footer > h2 > a:hover {
 }
 .modal-content {
     background-color: dodgerblue;
-    margin: 25% auto;
+    margin: 15% auto;
     padding: 5px 10px 15px 10px;
     border: 5px solid black;
     width: 40%;
@@ -80,6 +80,10 @@ footer > h2 > a:hover {
 #input-submit-btn:hover {
     color: red;
     border: 1px solid red;
+}
+#invalid {
+    margin-top: 15px;
+    color: red;
 }
 .close  {
     color: white;

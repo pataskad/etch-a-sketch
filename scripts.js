@@ -12,7 +12,7 @@ let divs = [];
 
 createDivGrid(squareSideCount); // initialize starting grid count
 
-// core program to create divs within container, 16x16 grid baseline
+// core function to create divs within container, 16x16 grid baseline
 function createDivGrid(squareSideCount) {
     clearGrid();
     container.style.gridTemplateColumns = (`repeat(${squareSideCount}, 1fr`);
@@ -44,9 +44,14 @@ function clearGrid() {
         container.removeChild(container.lastChild);
     }
 }
+function inputCancel() {
+    modal.style.display = "none";
+    invalidInput.textContent = '';
+    removeBlur();
+}
 function validateInput() {
     if (formInput.value < 4 || formInput.value > 100) {
-        invalidInput.textContent = 'Please enter a number between 4-100';
+        invalidInput.textContent = '*You must enter a number between 4-100*';
         return false;
     } else {
         return true;
@@ -60,31 +65,26 @@ resetBtn.addEventListener('click', () => {
     main.classList.add('blur');
 });
 formBtn.addEventListener('click', () => {
-    validateInput();// add function here to check form input value (must be 4-100, not null)
+    validateInput();
     if (validateInput() == true) {
         squareSideCount = formInput.value;
         createDivGrid(squareSideCount);
+        invalidInput.textContent = '';
         modal.style.display = "none";
         removeBlur();
     } else {
         modal.style.display = "block";
     }
-    /* squareSideCount = formInput.value;
-    createDivGrid(squareSideCount);
-    modal.style.display = "none";
-    removeBlur(); */
 });
 
 // modal content and functions
-let modal = document.getElementById("input-modal");
-let span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
-    modal.style.display = "none";
-    removeBlur();
+const modal = document.getElementById("input-modal");
+const modalCancelBtn = document.getElementsByClassName("close")[0];
+modalCancelBtn.onclick = function() {
+    inputCancel();
 }
 window.onclick = function(e) {
     if (e.target == modal) {
-        modal.style.display = "none";
-        removeBlur();
+        inputCancel();
     }
 }
