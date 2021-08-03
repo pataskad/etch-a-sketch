@@ -5,6 +5,7 @@ const resetBtn = document.querySelector('#grid-reset');
 const main = document.querySelector('#main-content');
 const formBtn = document.getElementById('input-submit-btn');
 const formInput = document.getElementById('input-box');
+const invalidInput = document.getElementById('invalid');
 
 let squareSideCount = 16; // limit squares to 100
 let divs = [];
@@ -43,6 +44,14 @@ function clearGrid() {
         container.removeChild(container.lastChild);
     }
 }
+function validateInput() {
+    if (formInput.value < 4 || formInput.value > 100) {
+        invalidInput.textContent = 'Please enter a number between 4-100';
+        return false;
+    } else {
+        return true;
+    }
+}
 
 // event listeners
 resetBtn.addEventListener('click', () => {
@@ -51,10 +60,19 @@ resetBtn.addEventListener('click', () => {
     main.classList.add('blur');
 });
 formBtn.addEventListener('click', () => {
-    squareSideCount = formInput.value;
+    validateInput();// add function here to check form input value (must be 4-100, not null)
+    if (validateInput() == true) {
+        squareSideCount = formInput.value;
+        createDivGrid(squareSideCount);
+        modal.style.display = "none";
+        removeBlur();
+    } else {
+        modal.style.display = "block";
+    }
+    /* squareSideCount = formInput.value;
     createDivGrid(squareSideCount);
     modal.style.display = "none";
-    removeBlur();
+    removeBlur(); */
 });
 
 // modal content and functions
