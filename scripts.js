@@ -28,7 +28,12 @@ function createDivGrid(squareSideCount) {
 
 // helper functions
 function colorChange(e) {
-    e.target.style.backgroundColor = 'black';
+    const randColor = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+    const r = randColor(0, 255);
+    const g = randColor(0, 255);
+    const b = randColor(0, 255);
+    const rgb = `rgb(${r},${g},${b})`;
+    e.target.style.backgroundColor = rgb;
 }
 function resetBackground() {
     for (let j = 0; j < divs.length; j++) {
