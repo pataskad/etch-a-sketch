@@ -29,6 +29,7 @@ footer > h2 > a:hover {
 }
 .js-div {
     background: rgb(253, 240, 240);
+    filter: brightness(100%);
     border: 0.25px solid rgba(192, 189, 189, 0.397);
     display: inline-grid;
 }

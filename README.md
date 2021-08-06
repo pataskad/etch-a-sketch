@@ -6,7 +6,7 @@ This project is apart of 'The Odin Project' curriculum and its purpose is to dem
 
 The best way to run this project after cloning to your own machine is to install and utilize the 'Live Server' extension within VSCode.  This extension makes viewing the current progress and potential changes significantly easier within a live browser environment.
 
-# Project Skills/Technologies Utilized #
+# Project Technologies Utilized #
 
 * HTML5
 * Javascript
