@@ -38,7 +38,6 @@ function colorChange(e) {
     } else if (e.target.style.backgroundColor) {
         e.target.style.backgroundColor = 'black';
     }
-    // 10 passes, 10% black with each pass
 }
 function resetBackground() {
     for (let j = 0; j < divs.length; j++) {

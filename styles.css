@@ -28,9 +28,9 @@ footer > h2 > a:hover {
     border-radius: 25px;
 }
 .js-div {
-    background: rgb(253, 240, 240);
-    filter: brightness(100%);
+    background-color: rgb(253, 240, 240);
     border: 0.25px solid rgba(192, 189, 189, 0.397);
+    filter: brightness(1);
     display: inline-grid;
 }
 #grid-reset {
