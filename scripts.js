@@ -7,12 +7,11 @@ const formBtn = document.getElementById('input-submit-btn');
 const formInput = document.getElementById('input-box');
 const invalidInput = document.getElementById('invalid');
 
-let squareSideCount = 16; // limit squares to 100
+let squareSideCount = 16;
 let divs = [];
 
 createDivGrid(squareSideCount); // initialize starting grid count
 
-// core function to create divs within container, 16x16 grid baseline
 function createDivGrid(squareSideCount) {
     clearGrid();
     container.style.gridTemplateColumns = (`repeat(${squareSideCount}, 1fr`);
@@ -48,7 +47,6 @@ function removeBlur() {
     main.classList.remove('blur');
 }
 function clearGrid() {
-    // removes all current children to allow for new grid count
     while (container.firstChild) {
         container.removeChild(container.lastChild);
     }
@@ -86,7 +84,7 @@ formBtn.addEventListener('click', () => {
     }
 });
 
-// modal content and functions
+// modal
 const modal = document.getElementById("input-modal");
 const modalCancelBtn = document.getElementsByClassName("close")[0];
 modalCancelBtn.onclick = function() {
